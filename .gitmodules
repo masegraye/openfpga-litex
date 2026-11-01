@@ -25,3 +25,4 @@
 [submodule "litex/vendor/pythondata-cpu-vexriscv_smp"]
 	path = litex/vendor/pythondata-cpu-vexriscv_smp
 	url = https://github.com/litex-hub/pythondata-cpu-vexriscv_smp
+	ignore = untracked
