@@ -1,7 +1,7 @@
 PACKAGES=libc libcompiler_rt libbase libfatfs liblitespi liblitedram libliteeth liblitesdcard liblitesata bios
 PACKAGE_DIRS=$(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/libc $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/libcompiler_rt $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/libbase $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/libfatfs $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/liblitespi $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/liblitedram $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/libliteeth $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/liblitesdcard $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/liblitesata $(LITEX_ROOT_DIRECTORY)/vendor/litex/litex/soc/software/bios
 LIBS=libc libcompiler_rt libbase libfatfs liblitespi liblitedram libliteeth liblitesdcard liblitesata
-TRIPLE=riscv64-unknown-elf
+TRIPLE=--not-found--
 CPU=vexriscv
 CPUFAMILY=riscv
 CPUFLAGS= -march=rv32i2p0_mafdc -mabi=ilp32d -D__vexriscv__ -DUART_POLLING

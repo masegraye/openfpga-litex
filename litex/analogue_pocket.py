@@ -111,6 +111,18 @@ class BaseSoC(SoCCore):
                 l2_cache_size=0,
             )
 
+        # Cartridge BRAM ----------------------------------------------------------------------------
+        # SDRAM is not calibrated when the Pocket performs auto-load (data.json slots
+        # without deferload), so those hardware bridge writes are silently dropped.
+        # BRAM is ready immediately after FPGA configuration, so we map a dedicated
+        # cartridge region here. Bridge writes to 0x50000000 land in BRAM and survive
+        # until the RISC-V reads them.
+        CART_RAM_ORIGIN = 0x5000_0000
+        CART_RAM_SIZE   = 64 * 1024
+        self.add_ram("cart_ram", origin=CART_RAM_ORIGIN, size=CART_RAM_SIZE)
+        self.add_constant("CART_RAM_BASE", CART_RAM_ORIGIN)
+        self.add_constant("CART_RAM_SIZE", CART_RAM_SIZE)
+
         self.submodules.videophy = VideoPocketPHY(platform.request("vga"))
         # 57.12 MHz
         timings = {
