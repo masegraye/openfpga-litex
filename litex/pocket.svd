@@ -3,7 +3,7 @@
 <device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
     <vendor>litex</vendor>
     <name>SOC</name>
-    <description><![CDATA[Litex SoC 2023-12-02 16:49:17]]></description>
+    <description><![CDATA[Litex SoC 2026-10-31 21:34:31]]></description>
 
     <addressUnitBits>8</addressUnitBits>
     <width>32</width>
@@ -2149,7 +2149,7 @@ register to disable individual events.]]></description>
             <memoryRegion>
                 <name>ROM</name>
                 <baseAddress>0x00000000</baseAddress>
-                <size>0x00020000</size>
+                <size>0x00004ED4</size>
             </memoryRegion>
             <memoryRegion>
                 <name>SRAM</name>
@@ -2160,6 +2160,11 @@ register to disable individual events.]]></description>
                 <name>MAIN_RAM</name>
                 <baseAddress>0x40000000</baseAddress>
                 <size>0x04000000</size>
+            </memoryRegion>
+            <memoryRegion>
+                <name>CART_RAM</name>
+                <baseAddress>0x50000000</baseAddress>
+                <size>0x00010000</size>
             </memoryRegion>
             <memoryRegion>
                 <name>VIDEO_FRAMEBUFFER</name>
@@ -2198,9 +2203,12 @@ register to disable individual events.]]></description>
             <constant name="CONFIG_CPU_VARIANT_STANDARD" value="None" />
             <constant name="CONFIG_CPU_HUMAN_NAME" value="VexRiscv SMP-STANDARD" />
             <constant name="CONFIG_CPU_NOP" value="nop" />
+            <constant name="CONFIG_ROM_INIT" value="1" />
             <constant name="DEPLOYMENT_PLATFORM" value="openfpga" />
             <constant name="DEPLOYMENT_TARGET" value="pocket" />
             <constant name="ROM_BOOT_ADDRESS" value="1073741824" />
+            <constant name="CART_RAM_BASE" value="1342177280" />
+            <constant name="CART_RAM_SIZE" value="65536" />
             <constant name="VIDEO_FRAMEBUFFER_BASE" value="1086324736" />
             <constant name="VIDEO_FRAMEBUFFER_HRES" value="266" />
             <constant name="VIDEO_FRAMEBUFFER_VRES" value="240" />

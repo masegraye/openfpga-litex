@@ -96,3 +96,5 @@ cr_ie_info.json
 # ROMS Checklist
 !checklist.sha1
 !checklist.md5
+litex/.venv/
+litex/vendor/pythondata-cpu-vexriscv_smp/
